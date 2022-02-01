@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Add />} />
+        <Route path='/' element={<Add />} exact />
         <Route path='/view' element={<View />} />
       </Routes>
     </Router>

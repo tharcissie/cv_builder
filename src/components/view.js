@@ -1,6 +1,8 @@
 import React from 'react';
 
-const View = () => {
+const View = (props) => {
+
+  console.log(props)
   return <div>
 
     <p>
