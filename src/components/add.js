@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { addCv } from "../redux/reducer";
 
 const mapStateToProps = (state) => {
@@ -15,14 +16,10 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-
-
 const Add = (props) => {
+  const navigate = useNavigate();
 
-
-
-
-  const [input, setInputs] = useState({ email: '', name: '', phone: '' })
+  const [input, setInputs] = useState({ email: '', names: '', phone: '', linkedin: '', school: '', course: '', start: '', end: '', job: '', company: '', enter: '', leave: '', school1: '', course1: '', start1: '', end1: '', job1: '', company1: '', enter1: '', leave1: '' })
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -32,72 +29,260 @@ const Add = (props) => {
     });
   }
 
-  // const add = () => {
-  //   if (input === "") {
-  //     alert("Input is Empty");
-  //   } else {
-  //     props.addCv({
-  //       id: Math.floor(Math.random() * 1000),
-  //       item: todo,
-  //       completed: false,
-  //     });
-  //     setInputs("");
-  //   }
-  // };
-
-
   const handlesubmit = (e) => {
     e.preventDefault()
-    if (input.name === "" || input.email === "") {
-      alert("ALl the fields are mandatory!");
-      return;
-    }
     props.addCv(input);
-    setInputs({ name: "", email: "" });
-    props.history.push('/view')
+    setInputs({ email: '', names: '', phone: '', linkedin: '', school: '', course: '', start: '', end: '', job: '', company: '', enter: '', leave: '', school1: '', course1: '', start1: '', end1: '', job1: '', company1: '', enter1: '', leave1: '' });
+    navigate('/view')
   }
 
 
-  return <div className="row justify-content-center">
-    <div className="col-md-7">
-      <h2>Add contact</h2>
-      <form className="card p-3" onSubmit={handlesubmit}>
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
-          <input
-            name="email"
-            value={input.email || ""}
-            onChange={handleChange}
-            type="email"
-            className="form-control"
-            placeholder="Enter email" />
+  return (<div className="container mt-5">
+
+    <h1 className="text-center">CV BUILDER</h1>
+    <div className="card p-4">
+    <form className="mt-5" onSubmit={handlesubmit}>
+      <div className="row justify-content-center">
+        <div className="col-md-4">
+          <h4>Personal Details</h4>
+          <div className=" mt-2  p-2">
+            <div className="form-group">
+              <input
+                name="names"
+                value={input.names || ""}
+                onChange={handleChange}
+                type="text"
+                className="form-control"
+                placeholder="Enter First and Last Name..." />
+            </div>
+            <div className="form-group">
+              <input
+                name="phone"
+                value={input.phone || ""}
+                onChange={handleChange}
+                type="number"
+                className="form-control"
+                placeholder="Enter Phone Number..." />
+            </div>
+            <div className="form-group">
+              <input
+                name="email"
+                value={input.email || ""}
+                onChange={handleChange}
+                type="email"
+                className="form-control"
+                placeholder="Enter Email Address..." />
+            </div>
+            <div className="form-group">
+              <input
+                name="linkedin"
+                value={input.linkedin || ""}
+                onChange={handleChange}
+                type="text"
+                className="form-control"
+                placeholder="Enter LinkedLn Url..." />
+            </div>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="name">Names</label>
-          <input
-            name="name"
-            onChange={handleChange}
-            value={input.name || ""}
-            type="text"
-            className="form-control"
-            id="name"
-            placeholder="Names" />
+        <div className="col-md-4">
+          <h4>Educational Backgroound</h4>
+          <div className=" mt-2  p-2">
+            <div className="form-group">
+              <input
+                name="school"
+                value={input.school || ""}
+                onChange={handleChange}
+                type="text"
+                className="form-control"
+                placeholder="Enter Institution Name..." />
+            </div>
+            <div className="form-group">
+              <input
+                name="course"
+                value={input.course || ""}
+                onChange={handleChange}
+                type="text"
+                className="form-control"
+                placeholder="Enter Course Name..." />
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label >Start Date</label>
+                  <input
+                    name="start"
+                    value={input.start || ""}
+                    onChange={handleChange}
+                    type="date"
+                    className="form-control" />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label >End Date</label>
+                  <input
+                    name="end"
+                    value={input.end || ""}
+                    onChange={handleChange}
+                    type="date"
+                    className="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
+          <div className="collapse" id="collapseExample1">
+            <div className=" mt-2  p-2">
+              <div className="form-group">
+                <input
+                  name="school1"
+                  value={input.school1 || ""}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter Institution Name..." />
+              </div>
+              <div className="form-group">
+                <input
+                  name="course1"
+                  value={input.course1 || ""}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter Course Name..." />
+              </div>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label >Start Date</label>
+                    <input
+                      name="start1"
+                      value={input.start1 || ""}
+                      onChange={handleChange}
+                      type="date"
+                      className="form-control" />
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label >End Date</label>
+                    <input
+                      name="end1"
+                      value={input.end1 || ""}
+                      onChange={handleChange}
+                      type="date"
+                      className="form-control" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="number">TEl</label>
-          <input
-            name="phone"
-            onChange={handleChange}
-            value={input.phone || ""}
-            type="number"
-            className="form-control"
-            id="number"
-            placeholder="Phone Numbers" />
+        <div className="col-md-4">
+          <h4>Experience</h4>
+          <div className=" mt-2  p-2">
+            <div className="form-group">
+              <input
+                name="job"
+                value={input.job || ""}
+                onChange={handleChange}
+                type="text"
+                className="form-control"
+                placeholder="Enter Job Title..." />
+            </div>
+            <div className="form-group">
+              <input
+                name="company"
+                value={input.company || ""}
+                onChange={handleChange}
+                type="text"
+                className="form-control"
+                placeholder="Enter Company Name..." />
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label >Start Date</label>
+                  <input
+                    name="enter"
+                    value={input.enter || ""}
+                    onChange={handleChange}
+                    type="date"
+                    className="form-control"
+                    placeholder="Enter Start Date..." />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label >End Date</label>
+                  <input
+                    name="leave"
+                    value={input.leave || ""}
+                    onChange={handleChange}
+                    type="date"
+                    className="form-control"
+                    placeholder="Enter End Date..." />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
+          <div className="collapse" id="collapseExample">
+            <div className="p-2  mt-2 ">
+              <div className="form-group">
+                <input
+                  name="job1"
+                  value={input.job1 || ""}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter Job Title..." />
+              </div>
+              <div className="form-group">
+                <input
+                  name="company1"
+                  value={input.company1 || ""}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter Company Name..." />
+              </div>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label >Start Date</label>
+                    <input
+                      name="enter1"
+                      value={input.enter1 || ""}
+                      onChange={handleChange}
+                      type="date"
+                      className="form-control"
+                      placeholder="Enter Start Date..." />
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label >End Date</label>
+                    <input
+                      name="leave1"
+                      value={input.leave1 || ""}
+                      onChange={handleChange}
+                      type="date"
+                      className="form-control"
+                      placeholder="Enter End Date..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="submit" className="btn btn-primary">Add</button>
-      </form>
+      </div>
+      <div className="text-center mt-5">
+      <button type="submit" className="btn btn-info mt-3 ">BUILD YOUR CV</button>
+      </div>
+    </form >
     </div>
-  </div>
+  </div >)
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Add)
