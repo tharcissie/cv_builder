@@ -1,21 +1,24 @@
 .fa-user-graduate{
     padding: 5px;
     border-radius: 50%;
-    background-color: rgb(193, 128, 255);
+    background-color: #023E8A;
     font-size: 12px;
     color: white;
 }
 .date{
     font-size: 14px;
 }
+.fa-envelope-open, .fa-linkedin, .fa-phone{
+    color: #023E8A;
+}
 
 .fa-dot-circle {
-    color: rgb(193, 128, 255);
+    color: #023E8A;
     margin-right: 12px;
   }
 
   .left{
-      background-color: rgb(193, 128, 255);
+      background-color: #023E8A;
       color: white;
   }
 
@@ -23,7 +26,7 @@
     font-size: 28px;
 }
 .name , h6{
-    color: rgb(193, 128, 255);
+    color: #023E8A;
 }
 
 .work{

@@ -48,7 +48,7 @@ const Add = () => {
                   name="phone"
                   value={input.phone || ""}
                   onChange={handleChange}
-                  type="number"
+                  type="phone"
                   className="form-control"
                   placeholder="Enter Phone Number..." />
               </div>

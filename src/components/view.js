@@ -31,42 +31,41 @@ const View = () => {
 
   return <div>
     <div className='container mt-5'>
-      <div className='mb-2'>
-        <button className='btn btn-sm btn-info mr-2' onClick={() => printDocument()}><i className="fas fa-download"></i>Download</button>
-        <button className='btn btn-sm btn-success mr-2' data-toggle="modal" data-target="#exampleModal" ><i className="fas fa-share"></i>Share</button>
-
-        <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Share With</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <TwitterShareButton
+      <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">Share With</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">
+              <TwitterShareButton
                 className='mr-3'
-                  url={currentURL}>
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
+                url={currentURL}>
+                <TwitterIcon size={32} round />
+              </TwitterShareButton>
 
-                <LinkedinShareButton
+              <LinkedinShareButton
                 className='mr-3'
-                  url={currentURL}>
-                  <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
-                <WhatsappShareButton
-                  url={currentURL}>
-                  <WhatsappIcon size={32} round />
-                </WhatsappShareButton>
-              </div>
+                url={currentURL}>
+                <LinkedinIcon size={32} round />
+              </LinkedinShareButton>
+              <WhatsappShareButton
+                url={currentURL}>
+                <WhatsappIcon size={32} round />
+              </WhatsappShareButton>
             </div>
           </div>
         </div>
       </div>
-      <div className='row justify-content-center'>
+      <div className='row mb-5 justify-content-center'>
         <div className='col-9'>
+          <div className='mb-2'>
+            <button className='btn btn-sm btn-info mr-2' onClick={() => printDocument()}><i className="fas fa-download"></i>Download</button>
+            <button className='btn btn-sm btn-primary mr-2' data-toggle="modal" data-target="#exampleModal" ><i className="fas fa-share"></i>Share</button>
+          </div>
           <div id='cv' className='card'>
             <div className='row'>
               <div className='col-md-7 p-5 '>
@@ -75,7 +74,7 @@ const View = () => {
                   <div className='ml-5'>
                     <p><i className="far fa-envelope-open"></i> {cv.email}</p>
                     <p><i className="fas fa-phone"></i> {cv.phone}</p>
-                    <a href={cv.linkedin}><i className="fab fa-linkedin text-dark"></i> {cv.linkedin}</a>
+                    <a href={cv.linkedin}><i className="fab fa-linkedin"></i> {cv.linkedin}</a>
                   </div>
                 </div>
 
