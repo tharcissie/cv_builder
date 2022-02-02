@@ -1,22 +1,6 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addCv } from "../redux/reducer";
-
-const mapStateToProps = (state) => {
-  return {
-    cv: state,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addCv: (obj) => dispatch(addCv(obj)),
-  };
-};
-
-
-const Add = (props) => {
+const Add = () => {
   const navigate = useNavigate();
 
   const [input, setInputs] = useState({ email: '', names: '', phone: '', linkedin: '', school: '', course: '', start: '', end: '', job: '', company: '', enter: '', leave: '', school1: '', course1: '', start1: '', end1: '', job1: '', company1: '', enter1: '', leave1: '' })
@@ -31,10 +15,15 @@ const Add = (props) => {
 
   const handlesubmit = (e) => {
     e.preventDefault()
-    props.addCv(input);
+    try {
+      window.localStorage.setItem("cv", JSON.stringify({ input}))
+    } catch (error) {
+      console.log(error)
+    }
     setInputs({ email: '', names: '', phone: '', linkedin: '', school: '', course: '', start: '', end: '', job: '', company: '', enter: '', leave: '', school1: '', course1: '', start1: '', end1: '', job1: '', company1: '', enter1: '', leave1: '' });
     navigate('/view')
   }
+  
 
 
   return (<div className="container mt-5">
@@ -285,4 +274,4 @@ const Add = (props) => {
   </div >)
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Add)
+export default Add
