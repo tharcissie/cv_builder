@@ -3,7 +3,6 @@ import { jsPDF } from "jspdf";
 import html2canvas from 'html2canvas';
 import './css/style.css'
 import {
-  FacebookShareButton, FacebookIcon,
   LinkedinShareButton, LinkedinIcon,
   TwitterShareButton, TwitterIcon,
   WhatsappShareButton, WhatsappIcon
@@ -46,12 +45,6 @@ const View = () => {
                 </button>
               </div>
               <div className="modal-body">
-                <FacebookShareButton
-                className='mr-3'
-                  url={currentURL}>
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-
                 <TwitterShareButton
                 className='mr-3'
                   url={currentURL}>
