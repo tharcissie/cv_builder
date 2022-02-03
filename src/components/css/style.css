@@ -8,8 +8,13 @@
 .date{
     font-size: 14px;
 }
-.fa-envelope-open, .fa-linkedin, .fa-phone{
+.fa-envelope-open, .fa-linkedin, .fa-phone, h5{
     color: #023E8A;
+}
+
+.cv-title{
+color: white;
+background-color: #023E8A;
 }
 
 .fa-dot-circle {
@@ -17,7 +22,7 @@
     margin-right: 12px;
   }
 
-  .left{
+  .left, .btn-info{
       background-color: #023E8A;
       color: white;
   }

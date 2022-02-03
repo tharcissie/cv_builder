@@ -23,16 +23,15 @@ const Add = () => {
     navigate('/view')
   }
 
- 
+
 
   return (<div className="container mt-5">
-
-    <h1 className="text-center">CV BUILDER</h1>
-    <div className="card p-4">
+    <div className="card mb-2 cv-title"><h1 className="text-center" style={{fontWeight: 900}}>CV BUILDER</h1></div>
+    <div className="card p-4 mb-5">
       <form className="mt-5" onSubmit={handlesubmit}>
         <div className="row justify-content-center">
           <div className="col-md-4">
-            <h4>Personal Details</h4>
+            <h5>Personal Details</h5>
             <div className=" mt-2  p-2">
               <div className="form-group">
                 <input
@@ -85,7 +84,7 @@ const Add = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <h4>Educational Backgroound</h4>
+            <h5>Educational Backgroound</h5>
             <div className=" mt-2  p-2">
               <div className="form-group">
                 <input
@@ -128,21 +127,21 @@ const Add = () => {
                       className="form-control" />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="exampleFormControlTextarea1">Description</label>
-                  <textarea
-                    className="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                    name="des1"
-                    value={input.des1 || ""}
-                    onChange={handleChange}
-                  >
-                  </textarea>
-                </div>
               </div>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlTextarea1">Description</label>
+                <textarea
+                  className="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  name="des1"
+                  value={input.des1 || ""}
+                  onChange={handleChange}
+                >
+                </textarea>
+              </div>
+              <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
             </div>
-            <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
             <div className="collapse" id="collapseExample1">
               <div className=" mt-2  p-2">
                 <div className="form-group">
@@ -186,24 +185,24 @@ const Add = () => {
                         className="form-control" />
                     </div>
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlTextarea1">Description</label>
-                    <textarea
-                      className="form-control"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                      name="des2"
-                      value={input.des2 || ""}
-                      onChange={handleChange}
-                    >
-                    </textarea>
-                  </div>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlTextarea1">Description</label>
+                  <textarea
+                    className="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    name="des2"
+                    value={input.des2 || ""}
+                    onChange={handleChange}
+                  >
+                  </textarea>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-md-4">
-            <h4>Experience</h4>
+            <h5>Experience</h5>
             <div className=" mt-2  p-2">
               <div className="form-group">
                 <input
@@ -248,21 +247,21 @@ const Add = () => {
                       placeholder="Enter End Date..." />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="exampleFormControlTextarea1">Description</label>
-                  <textarea
-                    className="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                    name="des3"
-                    value={input.des3 || ""}
-                    onChange={handleChange}
-                  >
-                  </textarea>
-                </div>
               </div>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlTextarea1">Description</label>
+                <textarea
+                  className="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  name="des3"
+                  value={input.des3 || ""}
+                  onChange={handleChange}
+                >
+                </textarea>
+              </div>
+              <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
             </div>
-            <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
             <div className="collapse" id="collapseExample">
               <div className="p-2  mt-2 ">
                 <div className="form-group">
@@ -308,18 +307,18 @@ const Add = () => {
                         placeholder="Enter End Date..." />
                     </div>
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlTextarea1">Description</label>
-                    <textarea
-                      className="form-control"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                      name="des4"
-                      value={input.des4 || ""}
-                      onChange={handleChange}
-                    >
-                    </textarea>
-                  </div>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlTextarea1">Description</label>
+                  <textarea
+                    className="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    name="des4"
+                    value={input.des4 || ""}
+                    onChange={handleChange}
+                  >
+                  </textarea>
                 </div>
               </div>
             </div>
