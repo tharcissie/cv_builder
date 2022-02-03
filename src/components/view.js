@@ -63,7 +63,7 @@ const View = () => {
       <div className='row mb-5 justify-content-center'>
         <div className='col-9'>
           <div className='mb-2'>
-            <button className='btn btn-sm btn-info mr-2' onClick={() => printDocument()}><i className="fas fa-download"></i>Download</button>
+            <button className='btn btn-sm info mr-2' onClick={() => printDocument()}><i className="fas fa-download"></i>Download</button>
             <button className='btn btn-sm btn-primary mr-2' data-toggle="modal" data-target="#exampleModal" ><i className="fas fa-share"></i>Share</button>
           </div>
           <div id='cv' className='card'>
