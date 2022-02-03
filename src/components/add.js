@@ -141,7 +141,7 @@ const Add = () => {
                 >
                 </textarea>
               </div>
-              <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
+              <button className=" btn btn-sm info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
             </div>
             <div className="collapse" id="collapseExample1">
               <div className=" mt-2  p-2">
@@ -263,7 +263,7 @@ const Add = () => {
                 >
                 </textarea>
               </div>
-              <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
+              <button className=" btn btn-sm info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
             </div>
             <div className="collapse" id="collapseExample">
               <div className="p-2  mt-2 ">
@@ -328,7 +328,7 @@ const Add = () => {
             </div>
           </div>
           <div className="text-center mt-5">
-            <button type="submit" className="btn btn-info mt-3 ">BUILD YOUR CV</button>
+            <button type="submit" className="btn info mt-3 ">BUILD YOUR CV</button>
           </div>
         </div>
       </form >
