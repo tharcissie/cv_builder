@@ -4,8 +4,6 @@ const Add = () => {
   const navigate = useNavigate();
 
   const [input, setInputs] = useState({ email: '', names: '', phone: '', linkedin: '', school: '', course: '', start: '', end: '', job: '', company: '', enter: '', leave: '', school1: '', course1: '', start1: '', end1: '', job1: '', company1: '', enter1: '', leave1: '', des1: '', des2: '', des3: '', des4: '', summary: '' })
-  
-  
   const handleChange = (e) => {
     const value = e.target.value;
     setInputs({
@@ -123,6 +121,7 @@ const Add = () => {
                     <label >End Date</label>
                     <input
                       name="end"
+                      min={input.start}
                       value={input.end || ""}
                       onChange={handleChange}
                       type="date"
@@ -142,7 +141,7 @@ const Add = () => {
                 >
                 </textarea>
               </div>
-              <button className=" btn btn-sm info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
+              <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Add Education</button>
             </div>
             <div className="collapse" id="collapseExample1">
               <div className=" mt-2  p-2">
@@ -181,6 +180,7 @@ const Add = () => {
                       <label >End Date</label>
                       <input
                         name="end1"
+                        min={input.start1}
                         value={input.end1 || ""}
                         onChange={handleChange}
                         type="date"
@@ -242,6 +242,7 @@ const Add = () => {
                     <label >End Date</label>
                     <input
                       name="leave"
+                      min={input.enter}
                       value={input.leave || ""}
                       onChange={handleChange}
                       type="date"
@@ -262,7 +263,7 @@ const Add = () => {
                 >
                 </textarea>
               </div>
-              <button className=" btn btn-sm info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
+              <button className=" btn btn-sm btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Experience</button>
             </div>
             <div className="collapse" id="collapseExample">
               <div className="p-2  mt-2 ">
@@ -302,6 +303,7 @@ const Add = () => {
                       <label >End Date</label>
                       <input
                         name="leave1"
+                        min={input.enter1}
                         value={input.leave1 || ""}
                         onChange={handleChange}
                         type="date"
@@ -326,7 +328,7 @@ const Add = () => {
             </div>
           </div>
           <div className="text-center mt-5">
-            <button type="submit" className="btn info mt-3 ">BUILD YOUR CV</button>
+            <button type="submit" className="btn btn-info mt-3 ">BUILD YOUR CV</button>
           </div>
         </div>
       </form >
