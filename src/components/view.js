@@ -107,7 +107,7 @@ const View = () => {
                 </div>
 
                 <div className='experience mt-5'>
-                  <h6 className='text-uppercase'><i className="fas fa-user-graduate"></i> <b>Experience</b></h6>
+                  <h6 className='text-uppercase'><i className="fas fa-briefcase"></i> <b>Experience</b></h6>
                   <div className='row mt-4'>
                     <div className='col-4 date'>
                       <p>{cv.start} - {cv.end}</p>
